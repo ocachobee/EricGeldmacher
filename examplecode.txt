@@ -1,0 +1,14 @@
+UNDERSTADING DATA STRUCTURE
+
+prj = arcpy.mp.ArcGISProject('current')
+print(prj)
+<arcpy._mp.ArcGISProject object at 0x00000130966AE748>
+lay = prj.listLayouts('Wells')[0]
+print(lay)
+<arcpy._mp.Layout object at 0x0000013096419908>
+txt = lay.listElements('TEXT_ELEMENT')[5]
+txt.text = "Arsenic Wells, Weston CT"
+
+
+DATA DRIVEN PAGES REPLACEMENT?
+
