@@ -12,3 +12,39 @@ txt.text = "Arsenic Wells, Weston CT"
 
 DATA DRIVEN PAGES REPLACEMENT?
 
+import arcpy
+
+dl = 'C:/'
+aprxpath = 'NRE_5585/Assignments/Final_Project/finalref.aprx'
+
+
+prj = arcpy.mp.ArcGISProject(dl + aprxpath)
+#selects project
+
+lyt = prj.listLayouts('Wells')[0]
+#selects layout
+
+mf = lyt.listElements('MAPFRAME_ELEMENT', 'main')[0]
+#selects mapframe
+
+m = mf.map
+#selects map
+
+bkmlst = m.listBookmarks()
+#selects all bookmarks
+
+title = lyt.listElements('TEXT_ELEMENT', 'Title')[0]
+#selects title (note you have to change the name,
+# not the text value in arcpro, to select by name)
+
+for bkm in bkmlst:
+    print('Initiating', bkm.name, 'map')
+    #go through list of bookmarks
+    title.text = bkm.name + ' Weston Wells'
+    #sets new title name
+    mf.zoomToBookmark(bkm)
+    #zooms to bookmark
+    lyt.exportToPDF('C:/NRE_5585/Temp/' + (bkm.name))
+    #exports to pdf
+
+print("Finished.")
