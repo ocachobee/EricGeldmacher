@@ -1,4 +1,6 @@
+-----------------------
 UNDERSTADING DATA STRUCTURE
+-----------------------
 
 prj = arcpy.mp.ArcGISProject('current')
 print(prj)
@@ -9,8 +11,9 @@ print(lay)
 txt = lay.listElements('TEXT_ELEMENT')[5]
 txt.text = "Arsenic Wells, Weston CT"
 
-
-DATA DRIVEN PAGES REPLACEMENT?
+-----------------------
+STANDALONE SCRIPT & DATA DRIVEN PAGES
+-----------------------
 
 import arcpy
 
@@ -48,3 +51,35 @@ for bkm in bkmlst:
     #exports to pdf
 
 print("Finished.")
+
+
+-----------------------
+UPDATE LAYERS
+-----------------------
+
+p = arcpy.mp.ArcGISProject('current)
+#seclect project
+
+m = p.listMaps('Map')[0]
+#select map
+
+l = m.listLayers('Water*')[0]
+#used a wildcard to select layer, not I used 'Water*' not 'Water Wells', this is a useful trick so you don't have to enter the whole name
+
+s = l.symbology
+#define symbology object
+
+s.updateRenderer('GraduatedColorsRenderer')
+#picks the rendere you are gonna use
+
+s.renderer.classificationField = 'sym'
+#the field 
+
+s.classificationMethod = 'NaturalBreaks'
+#the method
+
+s.renderer.breakCount = 15
+#number of natural breaks
+
+l.symbology = s
+#update
