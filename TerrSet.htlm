@@ -14,7 +14,7 @@
     <header>
       <div class="container">
         <div class="branding">
-          <h1><span class="highlight">Eric Geldmacher - Arcpy.mp Tutorial</span>  </h1>
+          <h1><span class="highlight">Eric Geldmacher - TerrSet Hard Classification</span>  </h1>
 
 
         </div>
@@ -33,7 +33,7 @@
       <nav>
         <ul>
 	  <h1><span class="current">
-		  <br>Arcpy.mp Tutorial
+		  <br>TerrSet Hard Classification
             
           </h1>
           <p>The purpose of this project was to use the TerrSet software to demonstrate the use of hard classification. 
