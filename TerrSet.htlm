@@ -45,12 +45,10 @@
              _____________________
               </h1>
 	
-          <li class="current"><a href="https://www.youtube.com/watch?v=M7EQ8IBLbxA" target="_blank" >VIDEO: Understanding the Structure</a></li>
-          <li class="current"><a href="https://www.youtube.com/watch?v=SeXd-wYbkjI" target="_blank" >VIDEO: Standalone Script & Data Driven Pages</a></li>
-          <li class="current"><a href="https://www.youtube.com/watch?v=anjn-bGeFtY" target="_blank" >VIDEO: Layer Files</a></li>   
-          <li class="current"><a href="examplecode.txt" download target="_blank" >Example Code txt</a></li>
-          <li class="current"><a href="https://pro.arcgis.com/en/pro-app/latest/arcpy/mapping/alphabeticallistofclasses.htm" target="_blank" >Esri List of Arcpy.mp Classes</a></li>
-          <li class="current"><a href="./img/ex.jpg" target="_blank" >Esri Graphic Example</a></li>
+          <li class="current"><a href="https://www.youtube.com/watch?v=OMP2wcQ_OFY" target="_blank" >VIDEO: Downloading Landsat Data for TerrSet</a></li>
+          <li class="current"><a href="https://www.youtube.com/watch?v=l-O988klvSs" target="_blank" >VIDEO: Creating a Mask/CLIP for a Raster in TerrSet</a></li>
+          <li class="current"><a href="https://www.youtube.com/watch?v=7Muwm7w5Upo" target="_blank" >VIDEO: Hard Classification in TerrSet</a></li>   
+          <li class="current"><a href="./img/hardclass.jpg" target="_blank" >Classified Raster Result</a></li>
           <h1><span class="current">
              _____________________
         </ul>
